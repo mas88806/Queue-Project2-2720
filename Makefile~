@@ -1,0 +1,25 @@
+CC = g++ -Wall -std=c++14 -g -O0 -pedantic-errors
+PQD = PriorityQueueDr.cpp
+PQ = PriorityQueue.cpp
+PQH = PriorityQueue.h
+
+all: BankSimulation
+
+Customer.o: Customer.cpp
+	$(CC) -c Customer.cpp
+
+QueType.o: QueType.cpp
+	$(CC) -c QueType.cpp
+
+PriorityQueue.o: $(PQ)
+	$(CC) -c $(PQ)
+
+BankSimulation.o: BankSimulation.cpp
+	$(CC) -c BankSimulation.cpp
+
+BankSimulation: PriorityQueue.o Customer.o QueType.o BankSimulation.o
+	g++ -Wall -g -o BankSimulation PriorityQueue.o QueType.o Customer.o BankSimulation.o
+
+clean:
+	rm -rf *.o
+	rm -rf BankSimulation

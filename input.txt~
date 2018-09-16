@@ -1,0 +1,26 @@
+Enqueue C 2
+Enqueue D 4
+Enqueue A 1
+Enqueue B 3
+List
+Dequeue
+List
+PeekPriority
+Peek
+Length
+Dequeue
+Dequeue
+List
+IsEmpty
+Dequeue
+IsEmpty
+Enqueue C 4
+Enqueue D 1
+Enqueue A 2
+List
+Length
+MakeEmpty
+Length
+isFull
+Dequeue
+Quit

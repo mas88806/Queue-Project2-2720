@@ -1,0 +1,40 @@
+#include <string>
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+class Customer{
+
+ private:
+  string name;
+  int arrival;
+  int service;
+  int departure;
+  int wait;
+
+ public:
+  Customer();
+
+  Customer(string n, int a, int s);
+
+  string getName();
+  void setName(string n);
+
+  int getArrival();
+  void setArrival(int a);
+
+  int getService();
+  void setService(int s);
+
+  int getWait();
+  void setWait(int w);
+
+  int getDeparture();
+  void setDeparture(int d);
+
+  Customer& operator=(Customer& c);
+
+};
+
+

@@ -1,0 +1,23 @@
+Project2:
+total 448
+-rw-r--r--. 1 ugrad    221 Mar 11 03:01 input.txt
+-rw-r--r--. 1 ugrad    214 Mar 11 03:01 input.txt~
+-rw-r--r--. 1 ugrad    579 Mar 11 01:26 Makefile
+-rw-r--r--. 1 ugrad    579 Mar 11 01:25 Makefile~
+-rw-r--r--. 1 ugrad     38 Mar 10 18:04 output.txt
+-rw-r--r--. 1 ugrad   3229 Mar 11 03:03 PriorityQueue.cpp
+-rw-r--r--. 1 ugrad   3200 Mar 11 02:58 PriorityQueue.cpp~
+-rwxr-xr-x. 1 ugrad  84560 Mar 11 03:03 PriorityQueueDr
+-rw-r--r--. 1 ugrad   2618 Mar 11 03:02 PriorityQueueDr.cpp
+-rw-r--r--. 1 ugrad   2618 Mar 11 02:19 PriorityQueueDr.cpp~
+-rw-r--r--. 1 ugrad 105392 Mar 11 03:03 PriorityQueueDr.o
+-rw-r--r--. 1 ugrad   2390 Mar 11 01:11 PriorityQueue.h
+-rw-r--r--. 1 ugrad   2386 Mar 11 01:11 PriorityQueue.h~
+-rw-r--r--. 1 ugrad  34432 Mar 11 03:03 PriorityQueue.o
+-rw-r--r--. 1 ugrad    188 Mar 11 01:40 README.txt
+-rw-r--r--. 1 ugrad      0 Mar 11 03:06 rec50322
+-rwxr-xr-x. 1 ugrad  76878 Mar 11 01:26 tester
+-rw-r--r--. 1 ugrad    247 Mar 11 01:24 tester.cpp
+-rw-r--r--. 1 ugrad    157 Mar 11 00:51 tester.cpp~
+-rw-r--r--. 1 ugrad  91928 Mar 11 01:26 tester.o
+/home/ugrads/strauss/csci2720/Project2:/home/work/cs2720c

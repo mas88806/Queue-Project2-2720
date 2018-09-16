@@ -1,0 +1,101 @@
+/*
+PriorityQueueDr.cpp
+Author: Max Strauss
+Submission Date: 3/10/17
+Purpose: The driver thing
+Statement of Academic Honesty:
+The following code represents my own work. I have neither received nor given inappropriate
+assistance. I have not copied or modified code from any source other than the course webpage or
+the course textbook. I recognize that any unauthorized assistance or plagiarism will be handled in
+accordance with the University of Georgia's Academic Honesty Policy and the policies of this
+course. I recognize that my work is based on an assignment created by the Department of
+Computer Science at the University of Georgia. Any publishing or posting of source code for this
+project is strictly prohibited unless you have written consent from the Department of Computer
+Science at the University of Georgia.
+*/
+
+
+
+#include "PriorityQueue.cpp"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+  ifstream infile;
+  string command;
+  infile.open("input.txt");
+  if(!infile)
+    {
+      cout << "error opening input file" << endl;
+      return 1;
+    }
+  string item;
+  PriorityQueue<string> queue;
+  int priority;
+  while (true)
+    {
+      infile >> command;
+      try {
+      if (command == "Enqueue")
+	  {
+	    infile >> item;
+	    infile >> priority;
+	    queue.enqueue(item, priority);
+	    // cout << item << " is enqueued." << endl;
+	  }
+      else if (command == "Dequeue")
+	  {
+	    queue.dequeue(item);
+	    // cout << item << " is dequeued. " << endl;
+	  }
+      else if (command == "List")
+	  {
+	    cout << "Queue: ";
+	    queue.printQueue();
+	  }
+      else if (command == "MakeEmpty")
+	{
+	  queue.makeEmpty();
+	}
+      else if (command == "Peek")
+	  cout << "Front item is " << queue.peek() << endl;
+      else if (command == "PeekPriority")
+	  cout << "Priority of the front item is " << queue.peekPriority() << endl;
+      else if (command == "IsEmpty")
+	  if (queue.isEmpty())
+	    cout << "True." << endl;
+	  else
+	    cout << "False." << endl;
+
+      else if (command == "isFull")
+	  if (queue.isFull())
+	    cout << "True." << endl;
+	  else cout << "False." << endl;
+      else if (command == "Length")
+	  cout << "Number of items in the Queue is: " << queue.size() << endl;
+      else if (command == "Quit")
+	  break;
+	else
+	  cout << command << " not found" << endl;
+      }
+      catch (FullQueue)
+	{
+	  cout << "FullQueue exception thrown." << endl;
+	}
+      catch (EmptyQueue)
+	{
+	  cout << "EmptyQueue exception thrown." << endl;
+	}
+    }
+
+ 
+  cout << "Testing completed."  << endl;
+  infile.close();
+  return 0;
+}
+

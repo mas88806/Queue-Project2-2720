@@ -1,0 +1,69 @@
+#include "Customer.h"
+#include <ostream>
+#include <iostream>
+
+Customer::Customer(){
+  name = "";
+  arrival = 0;
+  service = 0;
+  departure = 0;
+  wait = 0;
+}
+
+Customer::Customer(string n, int a, int s){
+  name = n;
+  arrival = a;
+  service = s;
+  departure = 0;
+  wait = 0;
+}
+
+string Customer::getName(){
+  return name;
+}
+
+int Customer::getArrival(){
+  return arrival;
+}
+
+int Customer::getService(){
+  return service;
+}
+
+int Customer::getWait(){
+  return wait;
+}
+
+int Customer::getDeparture(){
+  return departure;
+}
+
+void Customer::setName(string n){
+  name = n;
+}
+
+void Customer::setArrival(int a){
+  arrival = a;
+}
+
+void Customer::setService(int s){
+  service = s;
+}
+
+void Customer::setWait(int w){
+  wait = w;
+}
+
+void Customer::setDeparture(int d){
+  departure = d;
+}
+
+Customer& Customer::operator =(Customer& c){
+  setName(c.getName());
+  setArrival(c.getArrival());
+  setService(c.getService());
+  setDeparture(c.getDeparture());
+  setWait(c.getWait());
+  return c;
+}
+
